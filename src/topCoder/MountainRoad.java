@@ -8,10 +8,10 @@ import java.lang.Math;
  */
 public class MountainRoad {
 	
-	// Starting points of hypothenuses
+	// Starting points of hypotenuses
 	int[] start = null;
 
-	// Ending points of hypothenuses
+	// Ending points of hypotenuses
 	int[] end = null;
 	
 	/* Checks whether the triangle at position 'element' is
@@ -47,7 +47,7 @@ public class MountainRoad {
 	/*
 	 * Calculates the mountain distance that needs to be walked
 	 * across over the union of right isosceles triangles
-	 * whose hypothenuses are defined by starting and ending
+	 * whose hypotenuses are defined by starting and ending
 	 * points specified in 'start' and 'end' respectively.
 	 */
 	public double findDistance(int[] start, int[] end)
@@ -126,4 +126,16 @@ public class MountainRoad {
 		}
 		return total / Math.sqrt(2d);
 	}
+	
+	public double findDistanceLikeABoss ( int[] start, int[] end )
+	{
+		int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+		for ( int i=0; i<start.length; i++ )
+		{
+			min = Math.min(min, start[i]);
+			max = Math.max(max, end[i]);
+		}
+		return (double)(max - min) * Math.sqrt(2d);
+	}
+	
 }
