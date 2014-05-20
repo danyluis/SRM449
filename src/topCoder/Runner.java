@@ -18,6 +18,9 @@ public class Runner {
 		MountainRoad mr = new MountainRoad();
 		double len = mr.findDistance(start, end);
 		System.out.println("Length: " + len);
+		
+		len = mr.findDistanceLikeABoss(start,end);
+		System.out.println("Length computed like a boss: " + len);
 	}
 
 }
