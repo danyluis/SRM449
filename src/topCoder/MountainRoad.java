@@ -127,6 +127,14 @@ public class MountainRoad {
 		return total / Math.sqrt(2d);
 	}
 	
+	/*
+	 * This method computes the MountainRoad distance like a boss, i.e.
+	 * instead of stupidly searching all triangles under the road, it
+	 * computes the difference between the minimum start point and the
+	 * maximum end point and multiplies it by sqrt(2), which give the 
+	 * exact same distance that was calculated by the method findDistance
+	 * with so much complexity.
+	 */
 	public double findDistanceLikeABoss ( int[] start, int[] end )
 	{
 		int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
